@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
 // array of questions for user
 const questions = inquirer.prompt([
     {
@@ -79,8 +78,10 @@ ${response.tests}
 ## License
 ${response.license}
 ## Contact
-
+To view the code for this project visit the github profile below.
 Github Profile:[${response.github}](${response.github})
+
+For any questions contact us via email.
 Email: [${response.email}](mailto:${response.email})`
 ;
 
