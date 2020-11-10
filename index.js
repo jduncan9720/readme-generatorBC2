@@ -57,32 +57,32 @@ const questions = inquirer.prompt([
 ]).then((response) => {
     console.log("Answers", response)
     const readData =
-    `# ${response.title}
-    ## Description 
-    ${response.description}
-    ## Table of Contents
-    
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Contributors](#contributors)
-    * [License](#license)
-    * [Contact](#contact)
-    
-    ## Installation
-    ${response.installation}
-    ## Usage 
-    ${response.usage}
-    ## Contributors
-    ${response.contributors}
-    ## Tests
-    ${response.tests}
-    ## License
-    ${response.license}
-    ## Contact
-    
-    Github Profile:[${response.github}](${response.github})
-    Email: [${response.email}](mailto:${response.email})
-`;
+`# ${response.title}
+## Description 
+${response.description}
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [License](#license)
+* [Contact](#contact)
+
+## Installation
+${response.installation}
+## Usage 
+${response.usage}
+## Contributors
+${response.contributors}
+## Tests
+${response.tests}
+## License
+${response.license}
+## Contact
+
+Github Profile:[${response.github}](${response.github})
+Email: [${response.email}](mailto:${response.email})`
+;
 
 fs.writeFile('readME.md', readData, function (err) {
  if (err) throw err;
