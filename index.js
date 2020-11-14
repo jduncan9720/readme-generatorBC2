@@ -10,35 +10,83 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'title',
-        message: 'What is the Title of the Project?'
+        message: 'What is the Title of the Project?',
+        validate: (title) => {
+          if (title) {
+              return true
+          } else {
+              console.log("Please enter the Title")
+              return false
+          }
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Describe the project.'
+        message: 'Describe the project.',
+        validate: (description) => {
+            if (description) {
+                return true
+            } else {
+                console.log("Please enter a description")
+                return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'How do you install the project?'
+        message: 'How do you install the project?',
+        validate: (install) => {
+            if (install) {
+                return true
+            } else {
+                console.log("Please explain how to install the project.")
+                return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'How do you use the project?'
+        message: 'How do you use the project?',
+        validate: (usage) => {
+            if (usage) {
+                return true
+            } else {
+                console.log("Please explain how to use the project.")
+                return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'contributors',
-        message: 'Who contributed to this project?'
+        message: 'Who contributed to this project?',
+        validate: (contrib) => {
+            if (contrib) {
+                return true
+            } else {
+                console.log("Please enter contributors names?")
+                return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'List any tests for the project?'
+        message: 'List any tests for the project?',
+        validate: (title) => {
+            if (title) {
+                return true
+            } else {
+                console.log("Please enter any tests.")
+                return false
+            }
+          }
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Choose a licencse for this project.',
         choices: [
@@ -50,17 +98,33 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'github',
-        message: 'What is the URL to your github profile page?'
+        message: 'What is the URL to your github profile page?',
+        validate: (github) => {
+            if (github) {
+                return true
+            } else {
+                console.log("Enter your github URL.")
+                return false
+            }
+          }
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your contact email address?'
+        message: 'What is your contact email address?',
+        validate: (email) => {
+            if (email) {
+                return true
+            } else {
+                console.log("Enter your email address.")
+                return false
+            }
+          }
     }
 ]).then((response) => {
     console.log("Answers", response)
     
-    switch(response.license[0]){
+    switch(response.license){
         case "Apache 2.0":
         license.link1 = 'https://img.shields.io/badge/License-Apache%202.0-blue.svg'
         license.link2 = "https://opensource.org/licenses/Apache-2.0"
