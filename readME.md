@@ -13,7 +13,7 @@ This project uses node.js to create a profession readME file through the termina
 ## Installation
 First you will need to clone or fork the repository. Then using your terminal cd into the project folder. Begin the program by entering "node install.js" into the terminal.
 ## Usage 
-using your terminal, enter the command "node index.js". You will need to make sure node has already been installed on your computer. Through inquirer, the terminal will prompt you to answer a number of questions. Reponses will be stored and used to create the readMe file upon completion of the questions.  
+Using your terminal, enter the command "node index.js". You will need to make sure node has already been installed on your computer. Through inquirer, the terminal will prompt you to answer a number of questions. Reponses will be stored and used to create the readMe file upon completion of the questions.  
 ## Contributors
 Joshua Duncan
 ## Tests
